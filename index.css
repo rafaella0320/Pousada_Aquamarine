@@ -13,32 +13,26 @@ canvas {
     display: block;
 }
 
-/* Cabeçalho */
+/* Navbar */
 
-header {
+.navbar {
     background-color: #021e3e;
-    height: 80px;
-    padding: 24px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-header img {
+.navbar-brand img {
     max-height: 70px;
+    padding: 10px;
 }
 
-nav a {
-    border-radius: 6px;
-    color: #fff;
-    text-decoration: none;
-    background-color: #56a0f7;
-    padding: 2px 20px;
-    margin: 5px;
+a.nav-link {
+    color: white;
     font-size: 18px;
+    padding: 2px 20px;
+    border-radius: 6px;
+    background-color: #56a0f7;
 }
 
-nav a:hover {
+a.nav-link:hover {
     background-color: #95c3fa;
     transition: 1.2s;
     font-weight: 500;
@@ -47,15 +41,10 @@ nav a:hover {
 /* Estilizações Gerais */
 
 #inicio img,
-#pousada img,
-#acomodacoes img {
+#pousada img {
     border-radius: 20px;
-}
-
-#inicio,
-#pousada {
-    display: flex;
-    align-items: center;
+    max-height: 520px;
+    width: auto;
 }
 
 #inicio,
@@ -71,45 +60,32 @@ nav a:hover {
 h1 {
     font-weight: 600;
     font-size: 32px;
-    margin-bottom: 20px;
     color: #021e3e;
 }
 
 .texto {
     font-weight: 350;
     line-height: 150%;
-    margin-bottom: 10px;
     font-size: 18px;
 }
 
 /* Acomodações */
 
-#acomodacoes h1 {
-    text-align: center;
-}
-
-.acomodacao {
-    display: inline-block;
-    text-align: center;
-    margin: 0 10px;
-    vertical-align: top;
-    width: 30%;
-    padding: 20px;
-}
-
-.acomodacao img {
-    height: 300px;
-    width: auto;
-    margin-bottom: 10px;
-}
-
-.acomodacao h2 {
+#acomodacoes h5 {
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.descricao {
+#acomodacoes img {
+    border-radius: 20px 20px 0 0;
+}
+
+#acomodacoes .card {
+    border-radius: 20px;
+}
+
+#acomodacoes p {
     font-size: 18px;
     line-height: 1.5;
     margin-top: 10px;
@@ -118,46 +94,28 @@ h1 {
 
 /* Container Contato */
 
-.form {
-    background-image: url('img/onda.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px #021e3e;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+#contato {
+    margin: 20px 60px;
 }
 
 /* Redes Sociais */
 
-.con1 {
-    flex: 0.5; 
+
+.redes {
+    display: flex;
+    flex-direction: column;
 }
 
-.botoes-redes {
-    display: block;
-    color: #fff;
-    border: 2px solid #021e3e;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 18px;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    font-weight: 300;
-}
-
-.botoes-redes:hover{
-    background-color: #021e3e;
-    border: none;
-    transition: 1.5s;
-}
-
-.botoes-redes i {
+.redes a {
     margin-right: 10px;
+    color: white;
+}
+
+.redes a:hover {
+    color: white;
+    background-color: #56a0f7;
+    border: none;
+    transition: 1.2s;
 }
 
 .facebook {
@@ -180,47 +138,37 @@ h1 {
     border-color: #25d366;
 }
 
-.fa-facebook-f {
-    color: #fff;
+
+#contato {
+    box-shadow: 0 4px 6px #021e3e;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-.fa-instagram {
-    color: #fff;
-}
-
-.fa-twitter {
-    color: #fff;
-}
-
-.fa-whatsapp {
-    color: #fff;
-}
-
-/* Formulário de Contato */
-
-.con2 {
-    flex: 1.5;
-    padding-left: 20px;
-}
-
-.form .onda-bg {
+.onda-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('img/onda.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
     z-index: -1;
+}
+
+.form {
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .form label {
     display: block;
     margin-bottom: 8px;
-    color: #021e3e;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="number"],
+.form input,
 .form textarea {
     width: 100%;
     padding: 10px;
@@ -236,7 +184,7 @@ h1 {
 
 .form input[type="submit"] {
     background-color: #021e3e;
-    color: #fff;
+    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -255,34 +203,32 @@ footer {
     background-color: #021e3e;
     padding: 20px 0;
     text-align: center;
-    color: #fff;
+    font-size: 14px;
 }
 
-footer nav{
-    margin: 10px;
+footer img{
+    height: 50px;
+    width: auto;
 }
 
-footer nav a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 18px;
+.footer-links a,
+.copyright{
+    color: white;
 }
 
-footer nav a:hover {
+.footer-links a {
+    background-color: #56a0f7;
+    text-decoration: none;
+    padding: 2px 20px;
+    border-radius: 6px;
+}
+
+.footer-links a:hover {
     font-weight: 500;
     background-color: #95c3fa;
     transition: 1s;
 }
 
-footer p {
-    margin-top: 10px;
-}
-
-footer p a {
-    color: #56a0f7;
-    text-decoration: none;
-}
-
-footer p a:hover {
-    text-decoration: underline;
+.copyright a{
+    color: white;
 }
